@@ -2,7 +2,7 @@
   "name": "react-native-cardstack",
   "version": "1.0.0",
   "description": "react native component inspired by the iOS passbook app UI",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "keywords": [
     "update",
     "react-native",
@@ -36,16 +36,16 @@
   "scripts": {
     "start": "npm run compile:dev",
     "start:ios": "node CardStackDemo/node_modules/react-native/local-cli/cli.js start",
-    "compile:dist": "babel src --out-dir dist",
+    "compile:src": "babel src --out-dir src",
     "compile:dev": "babel src -w --out-dir CardStackDemo/react-native-cardstack",
-    "prepublish": "npm test && npm run compile:dist",
+    "prepublish": "npm test && npm run compile:src",
     "release": "npm version 1.0.0 && git push && git push --tags && npm publish",
     "test": "ava",
     "test:watch": "ava --watch",
     "test:coverage": "nyc ava"
   },
   "files": [
-    "dist"
+    "src"
   ],
   "author": "Cameron Bourke <cameron2295@gmail.com> (http://cameronbourke.com/)",
   "license": "MIT",
